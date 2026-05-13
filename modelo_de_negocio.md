@@ -4,7 +4,7 @@
 
 ## 1. Descripción General
 
-FinPet es una plataforma de financiamiento especializado para emergencias veterinarias, dirigida a propietarios de mascotas en Guadalajara, Jalisco. Opera bajo figura jurídica de **SOFOM E.N.R.**, con dos productos complementarios: una **membresía de suscripción anual** y una **línea de crédito pre-aprobada** de uso exclusivo en la red de comercios y clínicas afiliadas. Adicionalmente, la plataforma digital de FinPet opera como canal de promoción para los comercios afiliados, generando una fuente de ingreso adicional por comisión sobre ventas atribuidas a usuarios de la plataforma.
+FinPet es una plataforma de financiamiento especializado para emergencias veterinarias, dirigida a propietarios de mascotas en Guadalajara, Jalisco. Opera bajo figura jurídica de **SOFOM E.N.R.**, con dos productos complementarios: una **membresía de suscripción anual** y una **línea de crédito pre-aprobada** de uso exclusivo en la red de comercios y clínicas afiliadas. Adicionalmente, la plataforma digital de FinPet opera como canal de promoción para los comercios afiliados, generando ingresos por comisión sobre ventas atribuidas a usuarios de la plataforma según la categoría del comercio.
 
 ---
 
@@ -29,7 +29,7 @@ El descuento por pago anticipado ($150 MXN) incentiva la liquidez inmediata para
 - **3% de cashback** en todas las compras realizadas con comercios afiliados a través de la plataforma FinPet, mediante registro de la transacción con el código de usuario único del suscriptor.
 - El cashback acumulado es redimible exclusivamente como abono al siguiente pago mensual o anual de la membresía, o como abono a las cuotas del crédito activo. No se dispersa como efectivo.
 
-> **Nota sobre el cashback:** El costo del cashback para FinPet está cubierto por la comisión del 5.5% que los comercios afiliados pagan sobre las ventas atribuidas a usuarios de la plataforma. El margen neto para FinPet sobre transacciones en el marketplace es del 2.5% (5.5% comisión cobrada − 3% cashback otorgado), sin costo directo de capital de trabajo.
+> **Nota sobre el cashback:** El cashback del 3% otorgado al cliente en la categoría de alimentos, juguetes y medicamentos está cubierto íntegramente por la comisión del 3% que pagan estos comercios. El margen neto de FinPet en esta categoría es cero de forma intencional, siendo su función principal la atracción de tráfico y el enriquecimiento del perfil de comportamiento de gasto del cliente. El margen del marketplace proviene exclusivamente de la categoría de estudios de laboratorio y radiografías, donde la comisión es del 5% y el cashback del 3% deja un margen neto del 2% para FinPet.
 
 ---
 
@@ -37,7 +37,16 @@ El descuento por pago anticipado ($150 MXN) incentiva la liquidez inmediata para
 
 El cliente se registra en la plataforma web o aplicación móvil de FinPet **antes** de que ocurra una emergencia. El motor crediticio evalúa su perfil y le asigna una línea de crédito pre-aprobada. Al momento de la emergencia, el cliente se identifica en la clínica afiliada y activa su línea disponible.
 
-**Requisito de enganche mínimo:** Para activar el crédito, el cliente debe cubrir un monto mínimo de **$1,500 MXN de su propio bolsillo** directamente en la clínica al momento de la atención. Este mecanismo cumple dos funciones: reduce la exposición máxima de FinPet (EAD efectivo) y genera un compromiso financiero del cliente con la operación, desincentivando el uso irresponsable de la línea.
+**Requisito de enganche mínimo:** Para activar el crédito, el cliente debe cubrir un monto mínimo de **$1,500 MXN de su propio bolsillo** directamente en la clínica al momento de la atención. Este mecanismo reduce la exposición máxima de FinPet (EAD efectivo) y genera un compromiso financiero del cliente con la operación.
+
+**Comisión por apertura:** Cada vez que el cliente realiza una disposición de su línea de crédito se cobra una comisión por apertura de línea, independientemente del monto dispuesto:
+
+| Período | Comisión por disposición |
+|---|---|
+| Año 1 | $525 MXN |
+| Año 2 en adelante | $550 MXN |
+
+Esta comisión se cobra al momento de la activación del crédito y se netea junto con el MDR en el desembolso a la clínica.
 
 **Flujo operativo:**
 
@@ -51,24 +60,23 @@ Registro web/app → Evaluación crediticia → Línea pre-aprobada asignada
                      Cliente paga $1,500 MXN de enganche a la clínica
                                                       ↓
           FinPet desembolsa a la clínica el saldo neto:
-          (Costo emergencia − Enganche cliente − Comisión MDR 5%)
+          (Costo emergencia − Enganche cliente − MDR 5% − Comisión apertura)
                                                       ↓
-                    Cliente paga a FinPet (emergencia − enganche) + intereses a plazos
+          Cliente paga a FinPet (emergencia − enganche) + intereses a plazos (6–12 meses)
 ```
 
-**Ejemplo ilustrativo:**
+**Ejemplo ilustrativo (Año 1):**
 
 | Concepto | Monto |
 |---|---|
 | Costo de la emergencia | $16,000 MXN |
 | Enganche pagado por el cliente en la clínica | $1,500 MXN |
-| Comisión MDR de FinPet (5% sobre $16,000) | $800 MXN |
-| Desembolso de FinPet a la clínica | $13,700 MXN |
-| Total recibido por la clínica ($1,500 + $13,700) | $15,200 MXN |
-| Costo neto para la clínica (comisión MDR) | $800 MXN (5% del total) |
+| MDR de FinPet (5% sobre $16,000) | $800 MXN |
+| Comisión por apertura de línea (Año 1) | $525 MXN |
+| Desembolso de FinPet a la clínica | $13,175 MXN |
+| Total recibido por la clínica ($1,500 + $13,175) | $14,675 MXN |
+| Costo neto para la clínica | $1,325 MXN (8.3% del total) |
 | Deuda del cliente con FinPet ($16,000 − $1,500) | $14,500 MXN + intereses |
-
-La clínica recibe $15,200 MXN de forma garantizada e inmediata, cediendo únicamente el 5% del valor de la emergencia como comisión a FinPet por el servicio de financiamiento.
 
 **Segmentación de línea por PD estimado:**
 
@@ -80,7 +88,7 @@ La clínica recibe $15,200 MXN de forma garantizada e inmediata, cediendo única
 | Riesgo elevado | 18% – 25% | $2,000 – $4,999 |
 | Riesgo inaceptable | > 25% | Rechazo |
 
-Los umbrales son iniciales y se calibrarán conforme se acumule experiencia de repago en el portafolio propio. El modelo crediticio arranca con regresión logística y migra a modelo de boosting cuando el volumen de datos propios sea suficiente (estimado 12–18 meses de operación).
+Los umbrales son iniciales y se calibrarán conforme se acumule experiencia de repago en el portafolio propio. El modelo crediticio arranca con regresión logística y migra a modelo de boosting cuando el volumen de datos propios sea suficiente (estimado 12–18 meses de operación). El plazo de los créditos opera en un rango de **6 a 12 meses**, con un plazo promedio de **9 meses** para efectos del modelo financiero.
 
 ---
 
@@ -93,41 +101,47 @@ La red de comercios afiliados cumple cuatro funciones simultáneas:
 1. **Canal de distribución** de la membresía hacia clientes potenciales.
 2. **Punto de acumulación** de cashback para los suscriptores, mediante el registro de compras con el código de usuario único de cada cliente.
 3. **Punto de uso** del crédito al momento de la emergencia (aplica exclusivamente a clínicas veterinarias).
-4. **Canal promocional** dentro del marketplace de la plataforma FinPet, donde los comercios pueden publicar ofertas y promociones dirigidas a la base de suscriptores.
+4. **Canal promocional** dentro del marketplace de la plataforma FinPet, donde los comercios publican ofertas y promociones dirigidas a la base de suscriptores.
 
 ### 3.2 Tipos de afiliado, roles y comisiones
 
-| Tipo | Rol en cashback | Rol en crédito | Comisión pagada a FinPet |
+| Tipo de comercio | Comisión pagada a FinPet | Cashback al cliente | Margen neto FinPet |
 |---|---|---|---|
-| Clínica veterinaria | Acumulación | Desembolso de crédito | 5% MDR sobre monto financiado + 5.5% sobre ventas en marketplace |
-| Tienda de alimentos/accesorios | Acumulación | No aplica | 5.5% sobre ventas atribuidas a usuarios FinPet |
-| Estética y prestadores de servicio | Acumulación | No aplica | 5.5% sobre ventas atribuidas a usuarios FinPet |
+| Clínica veterinaria (crédito) | 5% MDR sobre monto financiado | No aplica | 5% |
+| Alimentos, juguetes y medicamentos | 3% sobre ventas atribuidas | 3% | 0% |
+| Estudios de laboratorio y radiografías | 5% sobre ventas atribuidas | 3% | 2% |
+| Estéticas y prestadores de servicio | 3% sobre ventas atribuidas | 3% | 0% |
+
+> El margen neto cero en alimentos, juguetes, medicamentos y estéticas es intencional. Estas categorías funcionan como motor de tráfico y de enriquecimiento del perfil crediticio del cliente, no como fuente de margen directo.
 
 ### 3.3 Mecánica de atribución de ventas en el marketplace
 
 Cada suscriptor de FinPet cuenta con un **código de usuario único** que presenta al comercio afiliado al momento de realizar una compra. El comercio registra la transacción en el portal FinPet mediante ese código, lo que permite:
 
 - Acreditar el 3% de cashback en la cuenta del cliente de forma automática.
-- Generar la obligación de pago del 5.5% de comisión por parte del comercio hacia FinPet.
+- Generar la obligación de pago de la comisión correspondiente por parte del comercio hacia FinPet.
 - Construir un historial de comportamiento de gasto del cliente, enriqueciendo el perfil crediticio para futuras revisiones del límite de crédito.
 
 ---
 
 ## 4. Fuentes de Ingreso
 
-El modelo opera con cuatro fuentes de ingreso diferenciadas:
+El modelo opera con **cinco fuentes de ingreso** diferenciadas:
 
 ### 4.1 Ingresos por Membresía
 Pago anual ($649 en una exhibición o $799 en mensualidades de $66.58) por suscripción a la plataforma. Ingreso recurrente y predecible, cobrado de forma anticipada en la modalidad anual o mensualmente con domiciliación en la modalidad mensualizada.
 
 ### 4.2 Ingresos por Intereses del Crédito
-Intereses cobrados al cliente sobre el monto financiado (costo de la emergencia menos el enganche de $1,500), pagados en cuotas mensuales durante el plazo acordado de 3 a 6 meses. Es la fuente de ingreso de mayor magnitud en el modelo.
+Intereses cobrados al cliente sobre el monto financiado (costo de la emergencia menos el enganche de $1,500), pagados en cuotas mensuales durante el plazo acordado de 6 a 12 meses. Es la fuente de ingreso de mayor magnitud en el modelo a escala.
 
 ### 4.3 Comisión por Desembolso (Merchant Discount Rate — MDR)
-Al momento de activar el crédito, FinPet retiene el 5% del valor total de la emergencia como comisión. Este ingreso se realiza de forma inmediata al netear el desembolso a la clínica, sin estar sujeto al riesgo de impago del cliente. La clínica recibe el neto del desembolso de FinPet más el enganche del cliente, sumando el valor total de la emergencia menos la comisión MDR.
+Al momento de activar el crédito, FinPet retiene el 5% del valor total de la emergencia como comisión. Este ingreso se realiza de forma inmediata al netear el desembolso a la clínica, sin estar sujeto al riesgo de impago del cliente.
 
-### 4.4 Comisión sobre Ventas en Marketplace (5.5%)
-Los comercios afiliados pagan una comisión del 5.5% sobre el valor de las ventas realizadas a usuarios de FinPet y registradas mediante el código de usuario único. De este 5.5%, el 3% se transfiere al cliente como cashback y el 2.5% restante constituye ingreso neto para FinPet. Esta fuente de ingreso crece proporcionalmente con la base de suscriptores activos y el volumen de transacciones en la red afiliada.
+### 4.4 Comisión por Apertura de Línea
+Cada disposición de la línea de crédito genera una comisión fija cobrada al momento de la activación: $525 MXN en el Año 1 y $550 MXN a partir del Año 2. Se netea junto con el MDR en el desembolso a la clínica, realizándose de forma inmediata y sin exposición al riesgo de impago.
+
+### 4.5 Comisión sobre Ventas en Marketplace
+Los comercios afiliados pagan una comisión sobre las ventas realizadas a usuarios de FinPet y registradas mediante el código de usuario único. La comisión varía por categoría y el margen neto para FinPet proviene exclusivamente de estudios de laboratorio y radiografías (2% neto después de cashback).
 
 ---
 
@@ -146,7 +160,7 @@ Conforme al archivo de estructura de costos del equipo, los principales bloques 
 | Seguros de vehículos | Fijo mensual |
 | Gasolina para reclutamiento de afiliados | Fijo mensual |
 
-El costo del cashback otorgado a suscriptores está cubierto por la comisión del marketplace y no representa un egreso neto para FinPet, siempre que el volumen de transacciones registradas sea suficiente para compensarlo. El único costo de riesgo variable propio del portafolio de crédito es la pérdida esperada por impago:
+El costo del cashback otorgado a suscriptores está cubierto íntegramente por las comisiones del marketplace y no representa un egreso neto para FinPet. El único costo de riesgo variable propio del portafolio de crédito es la pérdida esperada por impago:
 
 | Bloque | Naturaleza |
 |---|---|
@@ -161,22 +175,22 @@ Donde el **EAD efectivo = monto de la emergencia − $1,500 de enganche**, reduc
 ### Para el cliente propietario de mascota:
 - Línea de crédito lista antes de la emergencia, sin trámites en el momento de mayor estrés emocional y financiero.
 - Cashback del 3% en compras cotidianas con comercios afiliados, redimible contra la membresía o el crédito activo.
-- Acceso a financiamiento formal sin necesidad de historial crediticio robusto, con solo $1,500 MXN de enganche al momento de la emergencia.
+- Acceso a financiamiento formal con solo $1,500 MXN de enganche y plazos de 6 a 12 meses.
 
 ### Para la clínica veterinaria afiliada:
 - Cobro garantizado e inmediato por emergencias que de otra forma se perderían o diferirían por incapacidad de pago del cliente.
-- Costo de afiliación nulo: la comisión MDR del 5% se deduce únicamente cuando se activa un crédito, no hay cuota fija de membresía para el afiliado.
-- Canal de promoción gratuito en el marketplace de FinPet hacia una base de suscriptores con perfil de gasto en mascotas verificado.
+- Costo de afiliación nulo: el MDR del 5% y la comisión por apertura se deducen únicamente cuando se activa un crédito.
+- Canal de promoción en el marketplace de FinPet hacia una base de suscriptores con perfil de gasto en mascotas verificado.
 
-### Para comercios de alimentos, accesorios y servicios afiliados:
-- Acceso a una base de clientes segmentada y con gasto verificado en el ecosistema de mascotas.
-- Canal de promoción en el marketplace sin costo fijo: la comisión del 5.5% aplica solo sobre ventas efectivamente realizadas y registradas.
-- Herramienta de fidelización: el cashback incentiva a los clientes FinPet a preferir comercios afiliados sobre la competencia.
+### Para comercios de alimentos, accesorios, estudios y servicios afiliados:
+- Acceso a una base de clientes segmentada con gasto verificado en el ecosistema de mascotas.
+- Canal de promoción sin costo fijo: la comisión aplica solo sobre ventas efectivamente realizadas y registradas.
+- Herramienta de fidelización: el cashback incentiva a los clientes FinPet a preferir comercios afiliados.
 
 ### Para FinPet:
-- Cuatro fuentes de ingreso diferenciadas con distintos perfiles de riesgo y recurrencia.
-- El MDR se realiza de forma inmediata al desembolso, sin exposición al riesgo de impago.
-- El cashback está financiado por la comisión del marketplace, eliminándolo como costo neto.
+- Cinco fuentes de ingreso diferenciadas con distintos perfiles de riesgo y recurrencia.
+- El MDR y la comisión por apertura se realizan de forma inmediata al desembolso, sin exposición al riesgo de impago.
+- El cashback está cubierto por las comisiones del marketplace, eliminándolo como costo neto.
 - El enganche de $1,500 reduce el EAD efectivo y la pérdida esperada por operación.
 
 ---
@@ -197,7 +211,7 @@ La expansión se estructura en tres etapas:
 | Etapa | Horizonte | Hito |
 |---|---|---|
 | Piloto | Meses 1–6 | 10 clínicas veterinarias afiliadas, primeros 100 suscriptores, primeros 10 créditos mensuales. Validación del motor crediticio, del flujo de enganche y del mecanismo de atribución de ventas por código de usuario. |
-| Crecimiento | Meses 7–18 | Incorporación progresiva de tiendas de alimento y prestadores de servicios especializados. Lanzamiento del marketplace con comisión sobre ventas. Calibración del modelo de PD con datos propios. Expansión hacia las 450 unidades afiliadas objetivo. |
+| Crecimiento | Meses 7–18 | Incorporación progresiva de tiendas de alimento, prestadores de servicios y comercios de estudios de laboratorio. Lanzamiento del marketplace con comisiones diferenciadas por categoría. Calibración del modelo de PD con datos propios. Expansión hacia las 450 unidades afiliadas objetivo. |
 | Madurez | Año 2 en adelante | Red afiliada consolidada en 450 puntos. Migración del modelo crediticio a boosting. Evaluación de expansión geográfica fuera de la ZMG y de productos complementarios de cuidado preventivo financiado. |
 
 ---
