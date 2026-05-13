@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#061a35" />
   <meta name="description" content="FinPet — Línea de crédito pre-aprobada para emergencias veterinarias en Guadalajara. Membresía con cashback y red de clínicas afiliadas." />
   <title>FinPet — Crédito para emergencias veterinarias</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="img/puppy.jpg" />
 </head>
 <body>
-  <header class="navbar">
+  <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#top" class="logo" aria-label="FinPet inicio">
         <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
@@ -39,74 +41,125 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
       <div class="container hero-grid">
         <div class="hero-text">
-          <p class="eyebrow">Crédito veterinario pre-aprobado</p>
-          <h1>Cuando tu mascota te necesita, <span class="hl">FinPet ya está listo.</span></h1>
-          <p class="lead">Línea de crédito pre-aprobada para emergencias veterinarias en Guadalajara. Sin trámites en el momento de mayor estrés, financiamiento accesible y red de clínicas afiliadas.</p>
-          <div class="hero-actions">
-            <a href="#registro" class="btn btn-primary">Solicita tu línea</a>
-            <a href="#productos" class="btn-link">Conoce los productos →</a>
+          <p class="eyebrow reveal" data-reveal>
+            <span class="eyebrow-dot"></span>
+            Crédito veterinario pre-aprobado
+          </p>
+          <h1 class="reveal" data-reveal data-reveal-delay="100">
+            Cuando tu mascota te necesita,
+            <span class="hl">FinPet ya está listo.</span>
+          </h1>
+          <p class="lead reveal" data-reveal data-reveal-delay="200">
+            Línea de crédito pre-aprobada para emergencias veterinarias en Guadalajara. Sin trámites en el momento de mayor estrés, financiamiento accesible y red de clínicas afiliadas.
+          </p>
+          <div class="hero-actions reveal" data-reveal data-reveal-delay="300">
+            <a href="#registro" class="btn btn-primary">
+              Solicita tu línea
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#productos" class="btn-link">Conoce los productos</a>
           </div>
-          <ul class="hero-stats">
-            <li><strong>69.8%</strong><span>de hogares en México tiene mascota</span></li>
-            <li><strong>80M+</strong><span>animales domésticos a nivel nacional</span></li>
-            <li><strong>13.9%</strong><span>tiene algún tipo de cobertura médica</span></li>
+          <ul class="hero-stats reveal" data-reveal data-reveal-delay="400">
+            <li><strong data-count="69.8" data-suffix="%">0%</strong><span>de hogares en México tiene mascota</span></li>
+            <li><strong data-count="80" data-suffix="M+">0</strong><span>animales domésticos a nivel nacional</span></li>
+            <li><strong data-count="13.9" data-suffix="%">0%</strong><span>tiene cobertura médica</span></li>
           </ul>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-card">
-            <div class="hc-row">
-              <span class="hc-label">Línea pre-aprobada</span>
-              <span class="hc-pill">Activa</span>
+        <div class="hero-visual reveal" data-reveal data-reveal-delay="200">
+          <div class="hero-photo-wrap">
+            <div class="hero-photo">
+              <img src="img/puppy.jpg" alt="Cachorro feliz corriendo" loading="eager" />
+              <div class="hero-photo-glow"></div>
             </div>
-            <div class="hc-amount">$15,000<small> MXN</small></div>
-            <div class="hc-bar"><div class="hc-fill"></div></div>
-            <div class="hc-meta">
-              <div><span>Plazo</span><strong>9 meses</strong></div>
-              <div><span>Cashback</span><strong>3% – 5%</strong></div>
-              <div><span>Enganche</span><strong>15%</strong></div>
+            <div class="float-card float-card--1">
+              <div class="fc-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="fc-title">Crédito aprobado</div>
+                <div class="fc-sub">en menos de 5 min</div>
+              </div>
+            </div>
+            <div class="float-card float-card--2">
+              <div class="fc-row">
+                <span class="fc-label">Línea disponible</span>
+                <span class="fc-pill">Activa</span>
+              </div>
+              <div class="fc-amount">$15,000<small> MXN</small></div>
+              <div class="fc-bar"><div class="fc-fill"></div></div>
+            </div>
+            <div class="float-card float-card--3">
+              <div class="fc-cashback">
+                <div class="cashback-ring">
+                  <svg viewBox="0 0 60 60">
+                    <circle cx="30" cy="30" r="26" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="6"/>
+                    <circle cx="30" cy="30" r="26" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-dasharray="163.36" stroke-dashoffset="40" transform="rotate(-90 30 30)"/>
+                  </svg>
+                  <span>5%</span>
+                </div>
+                <div>
+                  <div class="fc-title">Cashback</div>
+                  <div class="fc-sub">en laboratorios</div>
+                </div>
+              </div>
             </div>
           </div>
-          <svg class="hero-paw" viewBox="0 0 200 200" aria-hidden="true">
-            <circle cx="60" cy="55" r="22" />
-            <circle cx="135" cy="55" r="22" />
-            <circle cx="30" cy="105" r="18" />
-            <circle cx="170" cy="105" r="18" />
-            <path d="M100 90c-30 0-55 22-55 51 0 17 13 32 30 32 10 0 16-5 25-5s15 5 25 5c17 0 30-15 30-32 0-29-25-51-55-51z" />
-          </svg>
         </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Pre-aprobación inmediata</span><span class="dot">●</span>
+        <span>Sin trámites en la emergencia</span><span class="dot">●</span>
+        <span>Cashback en cada compra</span><span class="dot">●</span>
+        <span>Clínicas afiliadas en la ZMG</span><span class="dot">●</span>
+        <span>Membresía $66.58/mes</span><span class="dot">●</span>
+        <span>Crédito desde $2,000 hasta $20,000</span><span class="dot">●</span>
+        <span>Pre-aprobación inmediata</span><span class="dot">●</span>
+        <span>Sin trámites en la emergencia</span><span class="dot">●</span>
+        <span>Cashback en cada compra</span><span class="dot">●</span>
+        <span>Clínicas afiliadas en la ZMG</span><span class="dot">●</span>
+        <span>Membresía $66.58/mes</span><span class="dot">●</span>
+        <span>Crédito desde $2,000 hasta $20,000</span><span class="dot">●</span>
       </div>
     </section>
 
     <!-- CONTEXT / PROBLEM -->
     <section class="context">
       <div class="container">
-        <p class="eyebrow center">El problema</p>
-        <h2 class="center">Una emergencia veterinaria puede costar hasta <span class="hl">$30,000 MXN</span>.</h2>
-        <p class="center lead-2">Fracturas, obstrucciones intestinales, partos con complicaciones o cirugías urgentes. Solo el 5% de los propietarios usa crédito formal para pagarlas, y el 33% nunca lleva a su mascota al veterinario.</p>
+        <p class="eyebrow center reveal" data-reveal>El problema</p>
+        <h2 class="center reveal" data-reveal data-reveal-delay="100">Una emergencia veterinaria puede costar hasta <span class="hl">$30,000 MXN</span>.</h2>
+        <p class="center lead-2 reveal" data-reveal data-reveal-delay="200">Fracturas, obstrucciones intestinales, partos con complicaciones o cirugías urgentes. Solo el 5% de los propietarios usa crédito formal para pagarlas, y el 33% nunca lleva a su mascota al veterinario.</p>
         <div class="context-grid">
-          <div class="ctx-card">
+          <div class="ctx-card reveal" data-reveal data-reveal-delay="100">
             <div class="ctx-num">$5K – $30K</div>
             <div class="ctx-label">Rango típico del costo de una emergencia veterinaria</div>
           </div>
-          <div class="ctx-card">
-            <div class="ctx-num">55%</div>
+          <div class="ctx-card reveal" data-reveal data-reveal-delay="200">
+            <div class="ctx-num"><span data-count="55" data-suffix="%">0%</span></div>
             <div class="ctx-label">Paga la emergencia con ahorros personales</div>
           </div>
-          <div class="ctx-card">
-            <div class="ctx-num">5%</div>
+          <div class="ctx-card reveal" data-reveal data-reveal-delay="300">
+            <div class="ctx-num"><span data-count="5" data-suffix="%">0%</span></div>
             <div class="ctx-label">Logra acceder a crédito formal a plazos</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PRODUCT GRID (al estilo Paleo Ridge) -->
+    <!-- PRODUCT GRID -->
     <section id="productos" class="products-grid">
       <div class="container">
         <div class="grid-4">
-          <a href="#suscripcion" class="grid-card grid-card--navy">
+          <a href="#suscripcion" class="grid-card grid-card--navy reveal" data-reveal>
             <div class="gc-top">
               <span class="gc-tag">Producto 1</span>
               <h3>Membresía<br/>FinPet</h3>
@@ -116,7 +169,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
           </a>
-          <a href="#credito" class="grid-card grid-card--blue">
+          <a href="#credito" class="grid-card grid-card--blue reveal" data-reveal data-reveal-delay="100">
             <div class="gc-top">
               <span class="gc-tag">Producto 2</span>
               <h3>Línea de crédito pre-aprobada</h3>
@@ -126,7 +179,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
           </a>
-          <a href="#marketplace" class="grid-card grid-card--teal">
+          <a href="#marketplace" class="grid-card grid-card--teal reveal" data-reveal data-reveal-delay="200">
             <div class="gc-top">
               <span class="gc-tag">Beneficio</span>
               <h3>Marketplace con cashback</h3>
@@ -136,7 +189,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
           </a>
-          <a href="#cobertura" class="grid-card grid-card--sky">
+          <a href="#cobertura" class="grid-card grid-card--sky reveal" data-reveal data-reveal-delay="300">
             <div class="gc-top">
               <span class="gc-tag">Red</span>
               <h3>Clínicas y comercios afiliados</h3>
@@ -154,10 +207,10 @@
     <section id="suscripcion" class="product-detail product-detail--cream">
       <div class="container detail-grid">
         <div class="detail-text">
-          <p class="eyebrow">Producto de entrada</p>
-          <h2>Membresía FinPet</h2>
-          <p class="lead">El paso uno para tener tu línea de crédito lista antes de la emergencia. Recibe cashback en compras cotidianas y acceso a una red de comercios verificados.</p>
-          <div class="price-card">
+          <p class="eyebrow reveal" data-reveal>Producto de entrada</p>
+          <h2 class="reveal" data-reveal data-reveal-delay="100">Membresía FinPet</h2>
+          <p class="lead reveal" data-reveal data-reveal-delay="200">El paso uno para tener tu línea de crédito lista antes de la emergencia. Recibe cashback en compras cotidianas y acceso a una red de comercios verificados.</p>
+          <div class="price-card reveal" data-reveal data-reveal-delay="300">
             <div class="price-main">
               <span class="price-eyebrow">Pago mensualizado</span>
               <div class="price-amount">$66.58 <small>MXN/mes</small></div>
@@ -165,16 +218,16 @@
             </div>
           </div>
           <ul class="checklist">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Acceso a la línea de crédito pre-aprobada para emergencias.</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>3% de cashback</strong> en compras con comercios afiliados.</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>5% de cashback</strong> en estudios de laboratorio y radiografías.</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Código de usuario único para acumular cashback en cada compra.</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>El cashback se redime como abono a tu próxima cuota o membresía.</li>
+            <li class="reveal" data-reveal data-reveal-delay="100"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Acceso a la línea de crédito pre-aprobada para emergencias.</li>
+            <li class="reveal" data-reveal data-reveal-delay="150"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>3% de cashback</strong> en compras con comercios afiliados.</li>
+            <li class="reveal" data-reveal data-reveal-delay="200"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><strong>5% de cashback</strong> en estudios de laboratorio y radiografías.</li>
+            <li class="reveal" data-reveal data-reveal-delay="250"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Código de usuario único para acumular cashback en cada compra.</li>
+            <li class="reveal" data-reveal data-reveal-delay="300"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>El cashback se redime como abono a tu próxima cuota o membresía.</li>
           </ul>
-          <a href="#registro" class="btn btn-primary">Activa tu membresía</a>
+          <a href="#registro" class="btn btn-primary reveal" data-reveal data-reveal-delay="200">Activa tu membresía</a>
         </div>
-        <div class="detail-visual">
-          <div class="member-card">
+        <div class="detail-visual reveal" data-reveal data-reveal-delay="200">
+          <div class="tilt member-card">
             <div class="mc-head">
               <span>FinPet · Member</span>
               <svg class="mc-logo" viewBox="0 0 32 32" aria-hidden="true">
@@ -199,65 +252,80 @@
     <!-- CRÉDITO -->
     <section id="credito" class="product-detail product-detail--navy">
       <div class="container">
-        <div class="detail-header">
-          <p class="eyebrow eyebrow--light">Producto principal</p>
-          <h2 class="white">Línea de crédito pre-aprobada</h2>
-          <p class="lead-2 white-dim">Diseñada exclusivamente para emergencias veterinarias. Se aprueba antes de que ocurra el evento; al momento de la emergencia tu clínica afiliada la activa y paga FinPet.</p>
+        <div class="credit-top">
+          <div class="credit-photo reveal" data-reveal>
+            <img src="img/vet-with-dog.webp" alt="Veterinaria atendiendo a un perro" loading="lazy" />
+            <div class="credit-photo-badge">
+              <div class="cpb-pulse"></div>
+              <strong>Pago directo a la clínica</strong>
+              <span>Tú solo cubres el 15% de enganche</span>
+            </div>
+          </div>
+          <div class="credit-text">
+            <p class="eyebrow eyebrow--light reveal" data-reveal>Producto principal</p>
+            <h2 class="white reveal" data-reveal data-reveal-delay="100">Línea de crédito pre-aprobada</h2>
+            <p class="lead-2 white-dim reveal" data-reveal data-reveal-delay="200" style="margin-left:0">Diseñada exclusivamente para emergencias veterinarias. Se aprueba antes de que ocurra el evento; al momento de la emergencia tu clínica afiliada la activa y FinPet paga directamente.</p>
+            <ul class="check-light">
+              <li class="reveal" data-reveal data-reveal-delay="200"><span class="dot-tick"></span>Plazos de 6 a 12 meses</li>
+              <li class="reveal" data-reveal data-reveal-delay="250"><span class="dot-tick"></span>Líneas hasta $20,000 MXN</li>
+              <li class="reveal" data-reveal data-reveal-delay="300"><span class="dot-tick"></span>Sin trámites en el momento de la emergencia</li>
+            </ul>
+          </div>
         </div>
 
         <div class="how-grid">
-          <div class="step">
+          <div class="step reveal" data-reveal>
             <div class="step-num">01</div>
             <h4>Te suscribes</h4>
             <p>Te das de alta con la membresía y completas la evaluación crediticia desde la app.</p>
           </div>
-          <div class="step">
+          <div class="step reveal" data-reveal data-reveal-delay="100">
             <div class="step-num">02</div>
             <h4>Recibes tu línea</h4>
             <p>FinPet evalúa tu perfil con un scorecard y te asigna una línea pre-aprobada según tu nivel de riesgo.</p>
           </div>
-          <div class="step">
+          <div class="step reveal" data-reveal data-reveal-delay="200">
             <div class="step-num">03</div>
             <h4>La usas en la emergencia</h4>
             <p>En la clínica afiliada cubres un 15% de enganche y FinPet desembolsa el resto directamente.</p>
           </div>
-          <div class="step">
+          <div class="step reveal" data-reveal data-reveal-delay="300">
             <div class="step-num">04</div>
             <h4>Pagas en mensualidades</h4>
             <p>Difiere el monto a plazos de 6 a 12 meses. El cashback acumulado abona a tus cuotas.</p>
           </div>
         </div>
 
-        <h3 class="segments-title">Segmentación por nivel de riesgo</h3>
+        <h3 class="segments-title reveal" data-reveal>Segmentación por nivel de riesgo</h3>
         <div class="segments">
-          <div class="seg seg--1">
+          <div class="seg seg--1 reveal" data-reveal>
             <div class="seg-tag">Bajo riesgo</div>
             <div class="seg-amount">$15,000 – $20,000</div>
             <div class="seg-pd">PD &lt; 5%</div>
           </div>
-          <div class="seg seg--2">
+          <div class="seg seg--2 reveal" data-reveal data-reveal-delay="80">
             <div class="seg-tag">Moderado-bajo</div>
             <div class="seg-amount">$10,000 – $14,999</div>
             <div class="seg-pd">PD 5% – 10%</div>
           </div>
-          <div class="seg seg--3">
+          <div class="seg seg--3 reveal" data-reveal data-reveal-delay="160">
             <div class="seg-tag">Moderado</div>
             <div class="seg-amount">$5,000 – $9,999</div>
             <div class="seg-pd">PD 10% – 18%</div>
           </div>
-          <div class="seg seg--4">
+          <div class="seg seg--4 reveal" data-reveal data-reveal-delay="240">
             <div class="seg-tag">Alto</div>
             <div class="seg-amount">$2,001 – $4,999</div>
             <div class="seg-pd">PD 18% – 25%</div>
           </div>
-          <div class="seg seg--5">
+          <div class="seg seg--5 reveal" data-reveal data-reveal-delay="320">
             <div class="seg-tag">Muy alto</div>
             <div class="seg-amount">$2,000 máx</div>
             <div class="seg-pd">PD &gt; 25%</div>
           </div>
         </div>
 
-        <div class="example">
+        <div class="example reveal" data-reveal>
           <div class="ex-head">
             <p class="eyebrow eyebrow--light">Ejemplo ilustrativo</p>
             <h3 class="white">Una emergencia de $10,000 MXN</h3>
@@ -276,32 +344,32 @@
     <!-- MARKETPLACE -->
     <section id="marketplace" class="marketplace">
       <div class="container">
-        <p class="eyebrow">Marketplace FinPet</p>
-        <h2>Cashback en cada compra para tu mascota.</h2>
-        <p class="lead-2">Compra en comercios afiliados con tu código FinPet y acumula cashback automáticamente. El comercio paga la comisión, tú recibes el beneficio.</p>
+        <p class="eyebrow reveal" data-reveal>Marketplace FinPet</p>
+        <h2 class="reveal" data-reveal data-reveal-delay="100">Cashback en cada compra para tu mascota.</h2>
+        <p class="lead-2 reveal" data-reveal data-reveal-delay="200" style="margin-left:0">Compra en comercios afiliados con tu código FinPet y acumula cashback automáticamente. El comercio paga la comisión, tú recibes el beneficio.</p>
         <div class="mkt-grid">
-          <div class="mkt-card">
+          <div class="mkt-card reveal" data-reveal>
             <div class="mkt-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path d="M12 18h24l-2 22a4 4 0 01-4 4H18a4 4 0 01-4-4L12 18z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M18 18V12a6 6 0 0112 0v6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             </div>
             <h4>Alimentos y juguetes</h4>
             <p class="mkt-cash"><strong>3%</strong> cashback</p>
           </div>
-          <div class="mkt-card">
+          <div class="mkt-card reveal" data-reveal data-reveal-delay="100">
             <div class="mkt-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path d="M24 8v32M8 24h32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
             </div>
             <h4>Laboratorio y radiografías</h4>
             <p class="mkt-cash"><strong>5%</strong> cashback</p>
           </div>
-          <div class="mkt-card">
+          <div class="mkt-card reveal" data-reveal data-reveal-delay="200">
             <div class="mkt-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 42c0-7 5-12 12-12s12 5 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             </div>
             <h4>Estéticas y servicios</h4>
             <p class="mkt-cash"><strong>3%</strong> cashback</p>
           </div>
-          <div class="mkt-card">
+          <div class="mkt-card reveal" data-reveal data-reveal-delay="300">
             <div class="mkt-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path d="M24 6l4 12h12l-10 7 4 13-10-8-10 8 4-13-10-7h12z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
             </div>
@@ -312,34 +380,34 @@
       </div>
     </section>
 
-    <!-- BENEFICIOS (estilo grid red de Paleo Ridge, pero azul) -->
+    <!-- BENEFICIOS -->
     <section class="benefits">
       <div class="container">
-        <p class="eyebrow eyebrow--light">Por qué FinPet</p>
-        <h2 class="white">Beneficios para el propietario</h2>
-        <p class="lead-2 white-dim">Pensado para responder con velocidad al momento más estresante: cuando tu mascota está en una emergencia.</p>
+        <p class="eyebrow eyebrow--light reveal" data-reveal>Por qué FinPet</p>
+        <h2 class="white reveal" data-reveal data-reveal-delay="100">Beneficios para el propietario</h2>
+        <p class="lead-2 white-dim reveal" data-reveal data-reveal-delay="200">Pensado para responder con velocidad al momento más estresante: cuando tu mascota está en una emergencia.</p>
         <div class="benefits-grid">
-          <div class="benefit">
+          <div class="benefit reveal" data-reveal>
             <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M22 32l8 8 14-16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h5>Aprobación previa</h5>
           </div>
-          <div class="benefit">
+          <div class="benefit reveal" data-reveal data-reveal-delay="80">
             <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="14" width="44" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 22h44M18 36h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             <h5>Cuotas accesibles</h5>
           </div>
-          <div class="benefit">
+          <div class="benefit reveal" data-reveal data-reveal-delay="160">
             <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 8l24 14v20c0 8-10 14-24 14S8 50 8 42V22z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 32l6 6 12-12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h5>Pago seguro a clínicas</h5>
           </div>
-          <div class="benefit">
+          <div class="benefit reveal" data-reveal data-reveal-delay="240">
             <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 56s-22-13-22-30a12 12 0 0122-6 12 12 0 0122 6c0 17-22 30-22 30z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
             <h5>Bienestar de tu mascota</h5>
           </div>
-          <div class="benefit">
+          <div class="benefit reveal" data-reveal data-reveal-delay="320">
             <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="22" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M14 54c0-10 8-18 18-18s18 8 18 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             <h5>Historial crediticio formal</h5>
           </div>
-          <div class="benefit">
+          <div class="benefit reveal" data-reveal data-reveal-delay="400">
             <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M32 18v14l10 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h5>Respuesta inmediata</h5>
           </div>
@@ -350,29 +418,33 @@
     <!-- COBERTURA / MAPA -->
     <section id="cobertura" class="coverage">
       <div class="container">
-        <p class="eyebrow">Cobertura</p>
-        <h2>Red potencial en la Zona Metropolitana de Guadalajara.</h2>
-        <p class="lead-2">Mapeamos las <strong>veterinarias</strong> y <strong>estéticas caninas</strong> registradas en el DENUE-INEGI dentro de la ZMG. Este es el universo de comercios objetivo para la red afiliada de FinPet.</p>
-        <div class="map-wrap">
+        <p class="eyebrow reveal" data-reveal>Cobertura</p>
+        <h2 class="reveal" data-reveal data-reveal-delay="100">Red potencial en la Zona Metropolitana de Guadalajara.</h2>
+        <p class="lead-2 reveal" data-reveal data-reveal-delay="200" style="margin-left:0">Mapeamos las <strong>veterinarias</strong> y <strong>estéticas caninas</strong> registradas en el DENUE-INEGI dentro de la ZMG. Este es el universo de comercios objetivo para la red afiliada de FinPet.</p>
+        <div class="map-wrap reveal" data-reveal>
           <iframe src="mapa_zmg.html" title="Mapa de veterinarias y estéticas en la ZMG" loading="lazy"></iframe>
         </div>
         <div class="coverage-stats">
-          <div><strong>877</strong><span>veterinarias en Jalisco</span></div>
-          <div><strong>218</strong><span>estéticas caninas en ZMG</span></div>
-          <div><strong>450</strong><span>afiliados objetivo a 2 años</span></div>
+          <div class="reveal" data-reveal><strong data-count="877">0</strong><span>veterinarias en Jalisco</span></div>
+          <div class="reveal" data-reveal data-reveal-delay="100"><strong data-count="218">0</strong><span>estéticas caninas en ZMG</span></div>
+          <div class="reveal" data-reveal data-reveal-delay="200"><strong data-count="450">0</strong><span>afiliados objetivo a 2 años</span></div>
         </div>
       </div>
     </section>
 
     <!-- CTA FINAL -->
     <section id="registro" class="cta">
+      <div class="cta-bg" aria-hidden="true">
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+      </div>
       <div class="container cta-grid">
         <div>
-          <p class="eyebrow eyebrow--light">Empieza hoy</p>
-          <h2 class="white">Activa tu línea de crédito antes de que la necesites.</h2>
-          <p class="lead-2 white-dim">Suscríbete a la membresía y deja tu línea pre-aprobada lista para cualquier emergencia veterinaria.</p>
+          <p class="eyebrow eyebrow--light reveal" data-reveal>Empieza hoy</p>
+          <h2 class="white reveal" data-reveal data-reveal-delay="100">Activa tu línea de crédito antes de que la necesites.</h2>
+          <p class="lead-2 white-dim reveal" data-reveal data-reveal-delay="200" style="margin-left:0">Suscríbete a la membresía y deja tu línea pre-aprobada lista para cualquier emergencia veterinaria.</p>
         </div>
-        <form class="cta-form" onsubmit="event.preventDefault(); alert('Gracias. Te contactaremos pronto.');">
+        <form class="cta-form reveal" data-reveal data-reveal-delay="200" onsubmit="event.preventDefault(); alert('Gracias. Te contactaremos pronto.');">
           <label>
             <span>Nombre completo</span>
             <input type="text" required placeholder="Tu nombre" />
@@ -433,6 +505,10 @@
       <span>Hecho con datos del DENUE-INEGI</span>
     </div>
   </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 
   <script src="script.js" defer></script>
 </body>
