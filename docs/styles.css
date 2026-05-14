@@ -847,31 +847,6 @@ h6 { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; margin
 .step h4 { color: var(--white); margin-bottom: .5rem; }
 .step p { color: rgba(255,255,255,.7); font-size: .92rem; margin: 0; line-height: 1.5; }
 
-.segments-title { text-align: center; margin-bottom: 1.5rem; }
-.segments {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: .8rem;
-  margin-bottom: 5rem;
-}
-.seg {
-  background: var(--white);
-  color: var(--navy-900);
-  border-radius: var(--radius-md);
-  padding: 1.4rem 1.1rem;
-  text-align: left;
-  border-top: 6px solid;
-  transition: transform .3s var(--ease-out), box-shadow .3s ease;
-}
-.seg:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-card); }
-.seg--1 { border-color: #1c7a44; }
-.seg--2 { border-color: var(--teal-500); }
-.seg--3 { border-color: var(--blue-500); }
-.seg--4 { border-color: #e0a000; }
-.seg--5 { border-color: #c0392b; }
-.seg-tag { font-size: .8rem; font-weight: 700; letter-spacing: .04em; color: var(--text-mute); text-transform: uppercase; margin-bottom: .6rem; }
-.seg-amount { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy-900); margin-bottom: .35rem; }
-.seg-pd { font-size: .82rem; color: var(--text-soft); }
 
 .example {
   background: rgba(255,255,255,.05);
@@ -1158,7 +1133,6 @@ h6 { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; margin
   .hero-visual { order: -1; max-width: 460px; margin: 0 auto; min-height: 380px; }
   .credit-photo { max-width: 460px; margin: 0 auto; }
   .how-grid { grid-template-columns: repeat(2, 1fr); }
-  .segments { grid-template-columns: repeat(2, 1fr); }
   .mkt-grid { grid-template-columns: repeat(2, 1fr); }
   .benefits-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr; }
@@ -1213,7 +1187,6 @@ h6 { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; margin
   .price-card { flex-direction: column; align-items: flex-start; }
 
   .how-grid { grid-template-columns: 1fr; }
-  .segments { grid-template-columns: 1fr; }
   .mkt-grid { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
 
